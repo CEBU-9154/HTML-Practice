@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Marks</title>
+    </head>
+    <body>
+        <fieldset>
+            <legend><h3>Academic Marks</h3></legend>
+            <form action="/action_page.php" oninput="x.value=(parseInt(m1.value)+parseInt(m2.value)+parseInt(m3.value))/3">
+                <label>Name</label>
+                <input type="text" id="name"><br>
+                <label>Enter Marks:</label><br>
+                <select name="Subject" id="subject">
+                    <option value="Maths">Maths</option>
+                    <option value="English">English</option>
+                    <option value="Science">Science</option>
+                </select>
+                <input type="number" id="m1" value="m1"><br>
+                <select name="Subject2" id="subject2">
+                    <option value="Maths">Maths</option>
+                    <option value="English">English</option>
+                    <option value="Science">Science</option>
+                </select>
+                <input type="number" id="m3" value="m3"><br>
+                <select name="Subject3" id="subject3">
+                    <option value="Maths">Maths</option>
+                    <option value="English">English</option>
+                    <option value="Science">Science</option>
+                </select>
+                <input type="number" id="m3" value="m3"><br>
+                Average: <output name="x" for="m1 m2 m3"></output>
+            </form>
+        </fieldset>
+    </body>
+</html>
