@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scrollspy</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            position: relative;
+        }
+        p {
+            font-size: 18px;
+        }
+        #section1 {padding-top:50px;height:250px;color:white;background-color: orange;}
+        #section2 {padding-top:50px;height:250px;color:green;background-color: white;}
+        #section3 {padding-top:50px;height:250px;color:orange;background-color:gray;}
+        #section4 {padding-top:50px;height:250px;color:white;background-color:green;}
+    </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Codingal</a>
+        </div>
+        <div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#section1">Section 1</a></li>
+                    <li><a href="#section2">Section 2</a></li>
+                    <li><a href="#section3">Section 3</a></li>
+                    <li><a href="#section4">Section 4</a></li>
+                </ul>
+            </div>
+        
+    </nav>
+    <div id="section1" class="container-fluid">
+        <h1>About Me!</h1>
+        <h5>Hi! You can call me <i>Chrisha</i>, <i>Cebu</i>, or <i>Ceb</i> for short. I'm 11 years old and into the Ninjago, Roblox Forsaken, Dandy's World, and, Let Him Go fandoms. My favorite colors are purple, green, and blue.</h5>
+        <p>Scroll this section.</p>
+        </div>
+    <div id="section2" class="container-fluid">
+        <h1>Hobby #1: Playing Roblox =D</h1>
+        <h5>I normally play Roblox whenever I'm free. I like to play Forsaken, Dandy's World(I don't play it that much), and Let Him Go(but not that much either). I'm a mobile player, meaning I play on my phone.</h5>
+        <p>Scroll this section.</p>
+        </div>
+    <div id="section3" class="container-fluid">
+        <h1>Hobby #2: Dancing Ballet (:</h1>
+        <h5>I have been dancing ballet for nearly 3 years now. I practice it on Saturdays and Sundays (if I'm free).</h5>
+        <p>Scroll this section.</p>
+        </div>
+    <div id="section4" class="container-fluid">
+        <h1>Hobby #3: Reading Books [:</h1>
+        <h5>I usually read when I'm not busy. I like to read any genre of book.</h5>
+    </div>
+    </div>
+</body>
+</html>
