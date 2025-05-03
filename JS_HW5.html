@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <center>
+        <h1>JavaScript Arrays and Objects</h1>
+        <h2>Person Details</h2>
+        <p id="name"></p>
+        <p id="age"></p>
+        <p id="city"></p>
+        <h2>Fruits List</h2>
+        <p id="firstFruit"></p>
+        <p id="secondFruit"></p>
+        <p id="joinedFruit"></p>
+        <p id="poppedFruit"></p>
+        <p id="arrayAfterPop"></p>
+        <script>
+            let person={
+                name: "Sacred Spawn",
+                age: 17,
+                city: "Spawn's Dream"
+            };
+            let fruits=["Apple", "Banana", "Berry", "Watermelon"];
+            document.getElementById("name").innerHTML="Name: " + person.name;
+            document.getElementById("age").innerHTML="Age: " + person.age;
+            document.getElementById("city").innerHTML="City: " + person.city;
+            document.getElementById("firstFruit").innerHTML="First Fruit: " + fruits[0];
+            document.getElementById("secondFruit").innerHTML="Second Fruit: " + fruits[1];
+            document.getElementById("joinedFruit").innerHTML="All Fruits: " + fruits.join(",");
+            let popped = fruits.pop();
+            document.getElementById("poppedFruit").innerHTML = "Popped Fruit: " + popped;
+            document.getElementById("arrayAfterPop").innerHTML = "Fruits after pop: " + fruits.join(", ");
+        </script>
+        </center>
+    </body>
+</html>
