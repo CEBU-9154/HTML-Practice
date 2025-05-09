@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>JavaScript</title>
-    </head>
-    <body>
-        <center>
-        <h1>JavaScript Arrays and Objects</h1>
-        <h2>Person Details</h2>
-        <p id="name"></p>
-        <p id="age"></p>
-        <p id="city"></p>
-        <h2>Fruits List</h2>
-        <p id="firstFruit"></p>
-        <p id="secondFruit"></p>
-        <p id="joinedFruit"></p>
-        <p id="poppedFruit"></p>
-        <p id="arrayAfterPop"></p>
-        <script>
-            let person={
-                name: "Sacred Spawn",
-                age: 17,
-                city: "Spawn's Dream"
-            };
-            let fruits=["Apple", "Banana", "Berry", "Watermelon"];
-            document.getElementById("name").innerHTML="Name: " + person.name;
-            document.getElementById("age").innerHTML="Age: " + person.age;
-            document.getElementById("city").innerHTML="City: " + person.city;
-            document.getElementById("firstFruit").innerHTML="First Fruit: " + fruits[0];
-            document.getElementById("secondFruit").innerHTML="Second Fruit: " + fruits[1];
-            document.getElementById("joinedFruit").innerHTML="All Fruits: " + fruits.join(",");
-            let popped = fruits.pop();
-            document.getElementById("poppedFruit").innerHTML = "Popped Fruit: " + popped;
-            document.getElementById("arrayAfterPop").innerHTML = "Fruits after pop: " + fruits.join(", ");
-        </script>
+<head>
+    <title>Roblox Sign-Up Page!</title>
+</head>
+<body>
+    <center>
+    <h1>Roblox Sign-Up Page</h1>
+    <hr>
+    <form id="loginForm" onsubmit="validate(event)">
+        <fieldset>
+            <div>
+                <label for="user">User:</label>
+                <input type="user" id="user" name="user" min="3"><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" minlength="8"><br><br>
+            </div>
+            <div>
+                <label for="age">Age:</label>
+                <input type="age" id="age" name="age" min="12" max="50"><br><br>
+            </div>
+            <div>
+                <label>Gender: </label><br>
+                <input type="radio" id="male" name="gender" value="Male" required>Male<br>
+                <label for="male"></label>
+                <input type="radio" id="female" name="gender" value="Female" required>Female<br>
+                <input type="radio" id="other" name="gender" value="other" required>Non-Binary<br><br>
+                <label for="birth" name="birth" value="birth">Birthday:</label>
+                <input type="date"><br><br>
+            </div>
+            <button type="submit">Sign Up</button>
+        </fieldset>
+        </for>
+        <div id="message"></div>
+        <script src="script3.js"></script>
         </center>
-    </body>
+</body>
 </html>
