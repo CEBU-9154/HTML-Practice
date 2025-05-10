@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Random</title>
+        <script>
+            function generateRandomNumbers() {
+                let count=0;
+                let output="";
+            
+            while (count < 5) {
+                let num=Math.floor(Math.random()*100) + 1;
+                output += num + "<br>";
+                count++;
+            }
+            document.getElementById("randomNumbers").innerHTML=output;
+        }
+        </script>
+    </head>
+    <body>
+        <h2>Click the button to generate random numbers</h2>
+        <button onclick="generateRandomNumbers()">Generate</button> 
+    </body>
+</html>
