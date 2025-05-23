@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>JavaScript</title>
+    </head>
+    <body>
+        <p id="error"></p>
+        <script>
+            try {
+                    alert("Error!");
+                    throw new Error("Please fix the error!");
+                }
+                catch (err) {
+                    document.getElementById("error").innerHTML = err.message;
+                }
+        </script>
+    </body>
+</html>
