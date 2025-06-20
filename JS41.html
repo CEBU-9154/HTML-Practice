@@ -2,18 +2,22 @@
 <html>
     <head>
         <title>JavaScript</title>
+        <style>
+            body {
+                text-align: center;
+                font-family: Helvetica, sans-serif;
+            }
+            #dice {
+                font-size: 320px;
+            }
+            #dice:hover {
+                cursor: pointer;
+            }
+        </style>
     </head>
     <body>
-        <script src="JS41.js">
-        </script>
-        <center>
-            <h1>JavaScript Stopwatch</h1>
-        <div class="wrapper">
-            <p><span id="seconds">00</span>:<span id="milliseconds">00</span></p>
-            <button id="button-start">Start</button>
-            <button id="button-stop">Stop</button>
-            <button id="button-reset">Reset</button>
-        </div>
-        </center>
-    </body>
+         <script src="JS41.js"></script>
+        <div>Click on the dice</div>
+<div id="dice" onclick="stopstart()"></div>
+</body>
 </html>
