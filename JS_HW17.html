@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+        <style>
+            body{
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin-top:100px;
+            }
+            #number {
+                font-size: 60px;
+                margin-bottom: 20px;
+            }
+            #toggleButton {
+                font-size:20px;
+                padding: 10px 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="nummber">0</div>
+        <button id="toggleButton">Start/Stop</button>
+        <script>
+            var clickCount=0;
+            var intervalid=null;
+
+            var numberElement=document.getElementById('number');
+            var toggleButton=document.getElementById('toggleButton');
+
+            function startRandomNumbers() {
+                intervalid=setInterval(()=> {
+                    const randomNum=Math.floor(Math.random()*100);
+                numberElement.textContent=randomNum;}, 500);              
+            }
+
+            function stopRandomNumbers() {
+                clearInterval(intervalid);
+            }
+
+            toggleButton.addEventListener('click', () => {
+                clickCount++;
+                if (clickCount%2===1) {
+                    stopRandomNumbers();
+                } else {
+                    startRandomNumbers();
+                }
+            });
+        </script>
+    </body>
+</html>
