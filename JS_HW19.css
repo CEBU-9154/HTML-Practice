@@ -1,0 +1,41 @@
+.myslides {
+    height: 550px;
+    width: 550px;
+}
+
+img {
+    width: 200px;
+}
+
+body {
+    background-image: linear-gradient(to right,#b278de, #5f3381);
+}
+
+h1 {
+    color: #3c1850;
+}
+
+h2 {
+    color: #3c1850;
+}
+
+h3 {
+    color: #3c1850;
+}
+
+li {
+    color: #3c1850;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+
+    .myslides {
+        display: none;
+        max-height: 100%;
+        max-width: 100%;
+    }
+}
