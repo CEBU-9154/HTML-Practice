@@ -1,0 +1,18 @@
+def swap1(a,b):
+    print(a)
+    print(b)
+    a^=b
+    b^=a
+    a^=b
+    print("\nAfter Swapping: a =", a, "b =", b)
+
+def swap2(a,b):
+    print(a)
+    print(b)
+    a=(a&b)+(a | b)
+    b=a+(~b)+1
+    a=a+(~b)+1
+    print("\nAfter swapping: a =", a, "b =", b)
+
+swap1(1,2)
+swap2(1,2)
