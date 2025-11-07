@@ -1,11 +1,16 @@
-def Hanoi(n,a,b,c):
-    if n==1:
-        print("Move disk 1 from rod", a, "to rod", b,".")
-        return
+def minEl(a, size):
+    temp=a[0]
+    for i in range(1, size):
+        temp=min(temp, a[i])
+    return temp
 
-    Hanoi(n-1,a,c,b)
-    print("Move disk", n, "from rod", a, "to rod", b)
-    Hanoi(n-1,c,b,a)
+def maxEl(a, size):
+    temp=a[0]
+    for i in range(1,size):
+        temp=max(temp,a[i])
+    return temp
 
-n=4
-Hanoi(n,'A','C','B')
+a=[12,1234,45,67,1]
+size=len(a)
+print("Minimum element of array: ", minEl(a,size))
+print("Maximum element of array: ", maxEl(a,size))

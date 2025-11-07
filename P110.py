@@ -1,22 +1,14 @@
-def display(maze,i,j,path):
-    n=len(maze)
-    m=len(maze[0])
+def print2L(a, a_size):
+    largest=secondLargest = -214783648
+    for i in range(a_size):
+        if (a[i] > largest):
+            secondLargest = largest
+            largest= a[i]
+        elif (a[i] > secondLargest and a[i] != largest):
+            secondLargest=a[i]
 
-    if i >= n or j >= n or maze[i][j] == 1:
-        return
-    
-    if i == n - 1 and j == m - 1:
-        print(path)
-        return
-    
-    display(maze, i+1, j, path+"D")
-    display(maze, i, j+1, path+"R")
+    print(secondLargest)
 
-maze = [
-    [0, 0, 0],
-    [0, 1, 0],
-    [0, 0, 0]
-]
-
-print("All possible paths for the rat to escape: ")
-display(maze,0,0,"")
+a=[1,2,3,4,5,6,7,8,9]
+a_size=len(a)
+print2L(a,a_size)

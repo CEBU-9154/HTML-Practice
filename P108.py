@@ -1,18 +1,16 @@
-keypad=["","","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"]
+def arrayMean(arr,arr_size):
+    sorted(arr)
+    total_sum=0
+    for i in range(0, arr_size):
+        total_sum+=arr[i]
+    return float(total_sum/arr_size)
+def arrayMedian(arr,arr_size):
+    sorted(arr)
+    if arr_size%2!=0:
+        return float(arr[int(arr_size/2)])
+    return float((arr[int((arr_size-1)/2)]+ arr[int(arr_size/2)])/2.0)
+arr=[1,4,5,2,5,8,5,2,6,8]
+arr_size=len(arr)
 
-def print_combos(nums,curr,output):
-    if curr==len(nums):
-        print(",".join(output))
-        return
-    
-    digit=nums[curr]
-    if digit == 0 or digit == 1:
-        return
-    
-    for ch in keypad[digit]:
-        output.append(ch)
-        print_combos(nums,curr+1,output)
-        output.pop()
-
-numbers=[4,2,3]
-print_combos(numbers, 0, [])
+print("Mean =", arrayMean(arr, arr_size))
+print("Median =", arrayMedian(arr, arr_size))
