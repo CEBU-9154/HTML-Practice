@@ -7,7 +7,7 @@ def sort(arr):
             low+=1
             mid+=1
         elif arr[mid] ==1:
-            mid+1
+            mid+=1
         else:
             arr[high], arr[mid]=arr[mid], arr[high]
             high-=1
