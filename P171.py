@@ -1,0 +1,32 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+data=pd.read_csv('gapminder(2007).csv')
+data.head()
+data.info()
+data.isnull().any()
+labels=['population','life_exp','gdp_cap']
+
+for l in labels:
+    sns.boxplot(y=data[l],palette='winter')
+    plt.show()
+
+sns.boxplot(y='gdp_cap',x='continent',data=data,palette='viridis')
+sns.boxplot(x='gdp_cap',y='continent',data=data,palette='viridis')
+sns.violinplot(y='gdp_cap',x='continent',data=data,palette='bright')
+
+for l in labels:
+    sns.kdeplot(data[l])
+    plt.show()
+
+for l in labels:
+    plt.hist(data[l])
+    plt.xlabel(l)
+    plt.show()
+
+for l in labels:
+    sns.distplot(data[l])
+    plt.show()
+    print("Skewness is: ", data[l].skew())
